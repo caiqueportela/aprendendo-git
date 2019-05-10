@@ -1,27 +1,27 @@
-O git È uma ferramenta que auxilia no controle de vers„o de arquivos, oferecendo ferramentas para equipes poderem ao mesmo tempo editar arquivos e poder gerenciar as alteraÁıes e centraliza-las com seguranÁa.
+O git √© uma ferramenta que auxilia no controle de vers√£o de arquivos, oferecendo ferramentas para equipes poderem ao mesmo tempo editar arquivos e poder gerenciar as altera√ß√µes e centraliza-las com seguran√ßa.
 
-Ele oferece um histÛrico de alteraÁıes que permite verificar todas alteraÁıes feitas e o que foi editado nela, seja adiÁ„o ou exclus„o de arquivos, e atÈ mesmo verificar qual linha foi adicionada, deletada ou alterada, mostrando o antigo e o novo valor. Esse recurso apesenta a data e hora das alteraÁıes, alÈm do usu·rio autor da mudanÁa.
+Ele oferece um hist√≥rico de altera√ß√µes que permite verificar todas altera√ß√µes feitas e o que foi editado nela, seja adi√ß√£o ou exclus√£o de arquivos, e at√© mesmo verificar qual linha foi adicionada, deletada ou alterada, mostrando o antigo e o novo valor. Esse recurso apesenta a data e hora das altera√ß√µes, al√©m do usu√°rio autor da mudan√ßa.
 
-O GitHub È uma plataforma online onde vocÍ pode armazenar seus arquivos utilizando o Git.
+O GitHub √© uma plataforma online onde voc√™ pode armazenar seus arquivos utilizando o Git.
 
-Inicialmente, para se identificar como usu·rio autor no git, utilize os comandos:
+Inicialmente, para se identificar como usu√°rio autor no git, utilize os comandos:
 
 git config --global user.name "<<nome>>"
 git config --global user.email "<<email>>"
 
-Substituindo <<nome>> e <<email>> pelo seu nome e e-mail, respectitivamente. Isso È necess·rio para identificar o autor das alteraÁıes, e ser· necess·rio para aplica-las.
+Substituindo <<nome>> e <<email>> pelo seu nome e e-mail, respectitivamente. Isso √© necess√°rio para identificar o autor das altera√ß√µes, e ser√° necess√°rio para aplica-las.
 
-Para criar um novo repostirÛrio local (pasta com controle de alteraÁıes) vocÍ deve navegar atÈ a pasta desejada e dar o comando:
+Para criar um novo repostir√≥rio local (pasta com controle de altera√ß√µes) voc√™ deve navegar at√© a pasta desejada e dar o comando:
 
 git init
 
-Ser· criado os arquivos necess·rios (ocultos) para tornar a pasta um repositÛrio. Lembrando que todo conte˙do da pasta (arquivos, pastas, subpastas e seus arquivos) far„o parte do repositÛrio.
+Ser√° criado os arquivos necess√°rios (ocultos) para tornar a pasta um reposit√≥rio. Lembrando que todo conte√∫do da pasta (arquivos, pastas, subpastas e seus arquivos) far√£o parte do reposit√≥rio.
 
-VocÍ pode verificar todos os arquivos que o git est· controlando, ou seja, os arquivos que ele est· verificando se houve alteraÁıes, utilizando o comando:
+Voc√™ pode verificar todos os arquivos que o git est√° controlando, ou seja, os arquivos que ele est√° verificando se houve altera√ß√µes, utilizando o comando:
 
 git ls-files
 
-Para verificar o status atual do repositÛrio, o commit atual, o branch atual e os arquivos untracked (arquivos n„o monitorados), utilize o comando:
+Para verificar o status atual do reposit√≥rio, o commit atual, o branch atual e os arquivos untracked (arquivos n√£o monitorados), utilize o comando:
 
 git status
 
@@ -29,62 +29,62 @@ Para adicionar um novo arquivo, utilize o comando:
 
 git add <<arquivo>>
 
-ApÛs, se dar um `git status` esse arquivo aparecer· como alterado e pronto para ser commitado.
-ApÛs editar um arquivo, ele tambem precisa ser adicionado utilizando `git add` para adiciona-lo ao commit.
-VocÍ pode adicionar v·rios arquivos separados por espaÁos, uma pasta ou todos arquivos do diretÛrio atual utilizando um ponto como nome do arquivo.
+Ap√≥s, se dar um `git status` esse arquivo aparecer√° como alterado e pronto para ser commitado.
+Ap√≥s editar um arquivo, ele tambem precisa ser adicionado utilizando `git add` para adiciona-lo ao commit.
+Voc√™ pode adicionar v√°rios arquivos separados por espa√ßos, uma pasta ou todos arquivos do diret√≥rio atual utilizando um ponto como nome do arquivo.
 
-Para enviar as alteraÁıes, ou seja, efetuar um commit, utilize o comando:
+Para enviar as altera√ß√µes, ou seja, efetuar um commit, utilize o comando:
 
 git commit -m "<<comentario>>"
 
-Onde em <<comentario>> (Sempre entre aspas!) vocÍ deve dar um coment·rio referente as alteraÁıes.
-Se adicionarmos a opÁ„o `-a` automaticamente ir· adicionar ao commit todos os arquivos alterados, mesmo sem terem suas alteraÁıes adicionadas; porÈm eles devem j· estar sendo rastreados para funcionar.
-Caso a opÁ„o `-m` n„o seja utilizada, ser· aberto um editor de texto para realizar o coment·rio do commit (˙til quando a descriÁ„o precisar ser um pouco maior).
+Onde em <<comentario>> (Sempre entre aspas!) voc√™ deve dar um coment√°rio referente as altera√ß√µes.
+Se adicionarmos a op√ß√£o `-a` automaticamente ir√° adicionar ao commit todos os arquivos alterados, mesmo sem terem suas altera√ß√µes adicionadas; por√©m eles devem j√° estar sendo rastreados para funcionar.
+Caso a op√ß√£o `-m` n√£o seja utilizada, ser√° aberto um editor de texto para realizar o coment√°rio do commit (√∫til quando a descri√ß√£o precisar ser um pouco maior).
 
-Para verificar o histÛrico de commits, utilize o comando:
+Para verificar o hist√≥rico de commits, utilize o comando:
 
 git log
 
-Se utiliza a opÁ„o `-p` ser· listado as mudanÁas em cada commit.
+Se utiliza a op√ß√£o `-p` ser√° listado as mudan√ßas em cada commit.
 
-Para listar as mudanÁas de cada commit, mostrando quais arquivos foram alterados, utilize o comando:
+Para listar as mudan√ßas de cada commit, mostrando quais arquivos foram alterados, utilize o comando:
 
 git whatchanged
 
-Par alistar com mais detalhes, mostrando o que foi alterado em cada arquivo, adicione a opÁ„o `-p`.
+Par alistar com mais detalhes, mostrando o que foi alterado em cada arquivo, adicione a op√ß√£o `-p`.
 Tecle 'Q' para sair da tela que exibe os detalhos.
 
-Para mostrar os repositÛrios remotos que seu repositÛrio local est· associado, utilize o comando:
+Para mostrar os reposit√≥rios remotos que seu reposit√≥rio local est√° associado, utilize o comando:
 
 git remote
 
-Com o repositÛrio remoto j· criado no GitHub, vocÍ pode associar ao repositÛrio local com o comando:
+Com o reposit√≥rio remoto j√° criado no GitHub, voc√™ pode associar ao reposit√≥rio local com o comando:
 
 git remote add <<nome>> <<URL>>
 
-Sendo <<nome>> um nome (apelido) para o repositÛrio (pode ser qualquer nome, porÈm normalmente chamando de origin) e <<URL>> o endereÁo do repositÛrio remoto. Ex:
+Sendo <<nome>> um nome (apelido) para o reposit√≥rio (pode ser qualquer nome, por√©m normalmente chamando de origin) e <<URL>> o endere√ßo do reposit√≥rio remoto. Ex:
 
 git remote add origin https://github.com/caiqueportela/aprendendo-git.git
 
-Para enviar as alteraÁıes (commits j· feitos) para o repositÛrio remoto, utilize o comando:
+Para enviar as altera√ß√µes (commits j√° feitos) para o reposit√≥rio remoto, utilize o comando:
 
 git push <<nome>> <<branch>>
 
-Sendo <<nome>> o nome dado ao repositÛrio (normalmente origin) e <<branch>> o nome da branch que est· trabalhando (geralmente master). Ex:
+Sendo <<nome>> o nome dado ao reposit√≥rio (normalmente origin) e <<branch>> o nome da branch que est√° trabalhando (geralmente master). Ex:
 
 git push origin master
 
-Para baixar (clonar) um repositÛrio do Github, basta utilizar o comando:
+Para baixar (clonar) um reposit√≥rio do Github, basta utilizar o comando:
 
 git clone <<URL>>
 
-Sendo <<URL>> substutida pelo endereÁo do repositÛrio desejado. Ex:
+Sendo <<URL>> substutida pelo endere√ßo do reposit√≥rio desejado. Ex:
 
 git clone https://github.com/minsait-veloe/check-in.git
 
-Ele por padr„o ir· criar uma pasta com o nome do repositÛrio e dentro dela ir· baixar todos os arquivos.
+Ele por padr√£o ir√° criar uma pasta com o nome do reposit√≥rio e dentro dela ir√° baixar todos os arquivos.
 
-Para evitar problemas nos arquivos, devemos trabalhar utilizando branchs. Assim, assim as suas alteraÁıes ficam em uma ·rea separada, e ao terminar vocÍ poder· adicina-la a ·rea principal, a branch master.
+Para evitar problemas nos arquivos, devemos trabalhar utilizando branchs. Assim, assim as suas altera√ß√µes ficam em uma √°rea separada, e ao terminar voc√™ poder√° adicina-la a √°rea principal, a branch master.
 
 Para listar as branchs do projeto, utilize o comando:
 
@@ -95,8 +95,8 @@ Para criar uma nova branch:
 git branch <<nome>>
 
 Sendo <<nome>> o nome que quer dar para a nova branch.
-Utilize a opÁ„o `-b` para alterar para branch apÛs criar.
-Para apagar uma branch utilize a opÁ„o `-d`, ou `-D` para forÁar em caso de n„o estar associada com a remota.
+Utilize a op√ß√£o `-b` para alterar para branch ap√≥s criar.
+Para apagar uma branch utilize a op√ß√£o `-d`, ou `-D` para for√ßar em caso de n√£o estar associada com a remota.
 
 Para mudar de branch, utilize o comando:
 
@@ -104,69 +104,53 @@ git checkout <<nome>>
 
 Sendo <<nome>> o nome da branch que quer trabalhar.
 
-Para enviar essa nova branch para o repositÛrio online e seus commits, utilize o comando:
+Para enviar essa nova branch para o reposit√≥rio online e seus commits, utilize o comando:
 
 git push -u <<nome>> <<branch>>
 
-Sendo <<nome>> o nome dado ao repositÛrio (normalmente origin) e <<branch>> o nome da branch que est· trabalhando.
-A opÁ„o `-u` serve para associar a branch local com a remota.
+Sendo <<nome>> o nome dado ao reposit√≥rio (normalmente origin) e <<branch>> o nome da branch que est√° trabalhando.
+A op√ß√£o `-u` serve para associar a branch local com a remota.
 
-Para baixar as atualizaÁıes do repositÛrio remoto, utilize o comando:
+Para baixar as atualiza√ß√µes do reposit√≥rio remoto, utilize o comando:
 
 git pull <<nome>> <<branch>>
 
-Sendo <<nome>> o nome dado ao repositÛrio (normalmente origin) e <<branch>> o nome da branch que deseja atualizar.
-Se der apenas `git pull` ir· atualizar a branch de trabalho atual.
+Sendo <<nome>> o nome dado ao reposit√≥rio (normalmente origin) e <<branch>> o nome da branch que deseja atualizar.
+Se der apenas `git pull` ir√° atualizar a branch de trabalho atual.
 
 Para listar as branchs locais, utilize o comando:
 
 git branch
 
-Para listar as remotas, utilize a opÁ„o `-r`.
-Para listar todas, utilize a opÁ„o `-a`.
+Para listar as remotas, utilize a op√ß√£o `-r`.
+Para listar todas, utilize a op√ß√£o `-a`.
 
-Caso tenha sido criado uma nova branch no repositÛrio remoto, deve cria-la e associar utilizando o comando:
+Caso tenha sido criado uma nova branch no reposit√≥rio remoto, deve cria-la e associar utilizando o comando:
 
 git branch -t <<branch-local>> <<nome>>/<<branch>>
 
-Sendo <<branch-local>> o nome da branch local a ser criada, <<nome>> o nome dado ao repositÛrio (normalmente origin) e <<branch>> o nome da brench remoto. Normalmente a branch local e remoto possuem o mesmo nome (isso evita confusıes).
+Sendo <<branch-local>> o nome da branch local a ser criada, <<nome>> o nome dado ao reposit√≥rio (normalmente origin) e <<branch>> o nome da brench remoto. Normalmente a branch local e remoto possuem o mesmo nome (isso evita confus√µes).
 
 
-Para listar as alteraÁıes realizadas no repositÛrio remoto, utilize o comando:
+Para listar as altera√ß√µes realizadas no reposit√≥rio remoto, utilize o comando:
 
 git fetch <<nome>>
 
-Sendo <<nome>> o nome dado ao repositÛrio (normalmente origin).
+Sendo <<nome>> o nome dado ao reposit√≥rio (normalmente origin).
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Para verificar as versıes (releases) do nosso projeto, utilizamos o comando:
+Para verificar as vers√µes (releases) do nosso projeto, utilizamos o comando:
 
 git tag
 
-Se quisermos editar o cÛdigo de uma vers„o diferente, podemos alterar para a vers„o desejada utilizando o comando:
+Se quisermos editar o c√≥digo de uma vers√£o diferente, podemos alterar para a vers√£o desejada utilizando o comando:
 
 git checkout <<versao>>
 
-Sendo <<versao>> substituido pelo nome da vers„o desejada.
+Sendo <<versao>> substituido pelo nome da vers√£o desejada.
 
-Podemos ver a diferenÁa entre duas versıes utilizando o comando:
+Podemos ver a diferen√ßa entre duas vers√µes utilizando o comando:
 
 git diff <<v1>> <<v2>>
 
-Substituindo <<v1>> e <<v2>> pelo nome das duas versıes que deseja comparar. Ele ir· listar os arquivos alterados e cada linha que foi alterada, adicionada ou removida.
+Substituindo <<v1>> e <<v2>> pelo nome das duas vers√µes que deseja comparar. Ele ir√° listar os arquivos alterados e cada linha que foi alterada, adicionada ou removida.
