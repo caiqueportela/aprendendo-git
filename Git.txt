@@ -39,16 +39,40 @@ git commit -m "<<comentario>>"
 
 Onde em <<comentario>> (Sempre entre aspas!) você deve dar um comentário referente as alterações.
 Se adicionarmos a opção `-a` automaticamente irá adicionar ao commit todos os arquivos alterados, mesmo sem terem suas alterações adicionadas; porém eles devem já estar sendo rastreados para funcionar.
-
 Caso a opção `-m` não seja utilizada, será aberto um editor de texto para realizar o comentário do commit (útil quando a descrição precisar ser um pouco maior).
 
+Para verificar o histórico de commits, utilize o comando:
 
+git log
 
+Se utiliza a opção `-p` será listado as mudanças em cada commit.
 
+Para listar as mudanças de cada commit, mostrando quais arquivos foram alterados, utilize o comando:
 
+git whatchanged
 
+Par alistar com mais detalhes, mostrando o que foi alterado em cada arquivo, adicione a opção `-p`.
+Tecle 'Q' para sair da tela que exibe os detalhos.
 
+Para mostrar os repositórios remotos que seu repositório local está associado, utilize o comando:
 
+git remote
+
+Com o repositório remoto já criado no GitHub, você pode associar ao repositório local com o comando:
+
+git remote add <<nome>> <<URL>>
+
+Sendo <<nome>> um nome (apelido) para o repositório (pode ser qualquer nome, porém normalmente chamando de origin) e <<URL>> o endereço do repositório remoto. Ex:
+
+git remote add origin https://github.com/caiqueportela/aprendendo-git.git
+
+Para enviar as alterações (commits já feitos) para o repositório remoto, utilize o comando:
+
+git push <<nome>> <<branch>>
+
+Sendo <<nome>> o nome dado ao repositório (normalmente origin) e <<branch>> o nome da branch que está trabalhando (geralmente master). Ex:
+
+git push origin master
 
 Para baixar (clonar) um repositório do Github, basta utilizar o comando:
 
@@ -59,6 +83,77 @@ Sendo <<URL>> substutida pelo endereço do repositório desejado. Ex:
 git clone https://github.com/minsait-veloe/check-in.git
 
 Ele por padrão irá criar uma pasta com o nome do repositório e dentro dela irá baixar todos os arquivos.
+
+Para evitar problemas nos arquivos, devemos trabalhar utilizando branchs. Assim, assim as suas alterações ficam em uma área separada, e ao terminar você poderá adicina-la a área principal, a branch master.
+
+Para listar as branchs do projeto, utilize o comando:
+
+git branch
+
+Para criar uma nova branch:
+
+git branch <<nome>>
+
+Sendo <<nome>> o nome que quer dar para a nova branch.
+Utilize a opção `-b` para alterar para branch após criar.
+Para apagar uma branch utilize a opção `-d`, ou `-D` para forçar em caso de não estar associada com a remota.
+
+Para mudar de branch, utilize o comando:
+
+git checkout <<nome>>
+
+Sendo <<nome>> o nome da branch que quer trabalhar.
+
+Para enviar essa nova branch para o repositório online e seus commits, utilize o comando:
+
+git push -u <<nome>> <<branch>>
+
+Sendo <<nome>> o nome dado ao repositório (normalmente origin) e <<branch>> o nome da branch que está trabalhando.
+A opção `-u` serve para associar a branch local com a remota.
+
+Para baixar as atualizações do repositório remoto, utilize o comando:
+
+git pull <<nome>> <<branch>>
+
+Sendo <<nome>> o nome dado ao repositório (normalmente origin) e <<branch>> o nome da branch que deseja atualizar.
+Se der apenas `git pull` irá atualizar a branch de trabalho atual.
+
+Para listar as branchs locais, utilize o comando:
+
+git branch
+
+Para listar as remotas, utilize a opção `-r`.
+Para listar todas, utilize a opção `-a`.
+
+Caso tenha sido criado uma nova branch no repositório remoto, deve cria-la e associar utilizando o comando:
+
+git branch -t <<branch-local>> <<nome>>/<<branch>>
+
+Sendo <<branch-local>> o nome da branch local a ser criada, <<nome>> o nome dado ao repositório (normalmente origin) e <<branch>> o nome da brench remoto. Normalmente a branch local e remoto possuem o mesmo nome (isso evita confusões).
+
+
+Para listar as alterações realizadas no repositório remoto, utilize o comando:
+
+git fetch <<nome>>
+
+Sendo <<nome>> o nome dado ao repositório (normalmente origin).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Para verificar as versões (releases) do nosso projeto, utilizamos o comando:
 
