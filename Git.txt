@@ -1,4 +1,4 @@
-O git é uma ferramenta que auxilia no controle de versão de arquivos, oferecendo ferramentas para equipes poderem ao mesmo tempo editar arquivos e poder gerenciar as alterações e centraliza-las com segurança.
+﻿O git é uma ferramenta que auxilia no controle de versão de arquivos, oferecendo ferramentas para equipes poderem ao mesmo tempo editar arquivos e poder gerenciar as alterações e centraliza-las com segurança.
 
 Ele oferece um histórico de alterações que permite verificar todas alterações feitas e o que foi editado nela, seja adição ou exclusão de arquivos, e até mesmo verificar qual linha foi adicionada, deletada ou alterada, mostrando o antigo e o novo valor. Esse recurso apesenta a data e hora das alterações, além do usuário autor da mudança.
 
@@ -95,7 +95,6 @@ Para criar uma nova branch:
 git branch <<nome>>
 
 Sendo <<nome>> o nome que quer dar para a nova branch.
-Utilize a opção `-b` para alterar para branch após criar.
 Para apagar uma branch utilize a opção `-d`, ou `-D` para forçar em caso de não estar associada com a remota.
 
 Para mudar de branch, utilize o comando:
@@ -103,6 +102,7 @@ Para mudar de branch, utilize o comando:
 git checkout <<nome>>
 
 Sendo <<nome>> o nome da branch que quer trabalhar.
+Utilize a opção `-b` para alterar para branch após criar.
 
 Para enviar essa nova branch para o repositório online e seus commits, utilize o comando:
 
@@ -131,12 +131,75 @@ git branch -t <<branch-local>> <<nome>>/<<branch>>
 
 Sendo <<branch-local>> o nome da branch local a ser criada, <<nome>> o nome dado ao repositório (normalmente origin) e <<branch>> o nome da brench remoto. Normalmente a branch local e remoto possuem o mesmo nome (isso evita confusões).
 
-
 Para listar as alterações realizadas no repositório remoto, utilize o comando:
 
 git fetch <<nome>>
 
 Sendo <<nome>> o nome dado ao repositório (normalmente origin).
+
+Para juntar o conteudo de duas branchs, utilize o comando:
+
+git merge <<brench>>
+
+Sendo <<brench>> o nome da brench onde fez as alterações. Ele irá juntar as alterações com a brench atual.
+
+Para puxar as alterações de uma branch, por exemplo a master, para a atual, utilize o comando:
+
+git rebase <<brench-base>> <<brench>>
+
+Sendo <<brench-base>> de onde você quer pegar as alterações e <<brench>> a brench onde você quer colocar as alterações.
+
+Se deseja voltar a versão de um arquivo para sua versão da ultima commit no repositório, utilize o comando:
+
+git checkout <<nome>>
+
+Sendo <<nome>> o nome do arquivo a ter sua versão restaurada.
+
+Se a alteração já estiver no Index (preparada para commit). Para remover, utilize o comando:
+
+git reset HEAD <<nome>>
+
+Sendo <<nome>> o nome do arquivo a ter seu estado voltado a não alterado.
+HEAD pode ser alterado pelo identificador do commit.
+
+Para reverter as alterações feitas em um commit, utilize o comando:
+
+git revert <<commit>>
+
+Sendo <<commit>> o identficador do commit a ter suas mudanças revertidas.
+Obs: APENAS alterações feitas nesse commit serão desfeitas, as alteraçõs posteriores se mantem. Um novo commit é criado automaticamente.
+
+Para salvar as aterações com commit que não foram enviadas para um "mais tarde", utilize:
+
+git start
+
+Ele irá zerar todas as alterações que não foram enviadas e restaurar os arquivos para o ultimo commit do repositório web.
+
+Para ver o que estar no "mais tarde", utilize:
+
+git stash list
+
+Para restaurar o ultimo "mais tarde" da lista, utilize:
+
+git stash pop
+
+Para restaurar um especifico, utilize:
+
+git stash apply <<numero>>
+
+Sendo <<numero>> o numero do "mais tarde" a ser restaurado.
+
+Para apagar um "mais tarde", utilize:
+
+git stash drop
+
+`git stash clear` limpa tudo
+
+Para fazer buscar de alterações utilize `git bisect`. Um pouco complexo.
+
+
+
+___________________________________________________________________________
 
 
 Para verificar as versões (releases) do nosso projeto, utilizamos o comando:
