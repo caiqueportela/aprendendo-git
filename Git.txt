@@ -197,6 +197,12 @@ git stash drop
 
 Para fazer buscar de alterações utilize `git bisect`. Um pouco complexo.
 
+Para dar merge com apenas as alterações feitas em um commit específico, utilize:
+
+git cherry-pick <<commit>>
+
+Sendo <<commit>> a hash do commit desejado.
+
 
 
 ___________________________________________________________________________
