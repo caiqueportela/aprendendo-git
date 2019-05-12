@@ -1,4 +1,6 @@
-﻿O git é uma ferramenta que auxilia no controle de versão de arquivos, oferecendo ferramentas para equipes poderem ao mesmo tempo editar arquivos e poder gerenciar as alterações e centraliza-las com segurança.
+﻿# Git
+
+O git é uma ferramenta que auxilia no controle de versão de arquivos, oferecendo ferramentas para equipes poderem ao mesmo tempo editar arquivos e poder gerenciar as alterações e centraliza-las com segurança.
 
 Ele oferece um histórico de alterações que permite verificar todas alterações feitas e o que foi editado nela, seja adição ou exclusão de arquivos, e até mesmo verificar qual linha foi adicionada, deletada ou alterada, mostrando o antigo e o novo valor. Esse recurso apesenta a data e hora das alterações, além do usuário autor da mudança.
 
@@ -6,8 +8,8 @@ O GitHub é uma plataforma online onde você pode armazenar seus arquivos utiliz
 
 Inicialmente, para se identificar como usuário autor no git, utilize os comandos:
 
-git config --global user.name "<<nome>>"
-git config --global user.email "<<email>>"
+    git config --global user.name "<<nome>>"
+    git config --global user.email "<<email>>"
 
 Substituindo <<nome>> e <<email>> pelo seu nome e e-mail, respectitivamente. Isso é necessário para identificar o autor das alterações, e será necessário para aplica-las.
 
